@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    container_name: layers_db
+    image: mariadb:10.7.1
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: app
+      MARIADB_USER: app
+      MARIADB_PASSWORD: pass
+    ports:
+      - '3306:3306'
